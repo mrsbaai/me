@@ -4,9 +4,10 @@
 $servername = "localhost";
 $username = "forge";
 $password = "ZUMeAhYa2FsU8GITdoHs";
+$dbname = "forge";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
