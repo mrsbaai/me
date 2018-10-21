@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "INSERT INTO poeple (first_name, last_name, email) VALUES ('John', 'Doe', 'john@example.com')";
+$sql = "INSERT INTO people (first_name, last_name, email) VALUES ('John', 'Doe', 'john@example.com')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
