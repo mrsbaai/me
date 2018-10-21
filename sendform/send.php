@@ -24,16 +24,16 @@ $statusMsg = '';
 
 // File upload path
 $targetDir = "uploads/";
-$fileName = basename($_FILES["front"]["name"]);
+$fileName = basename($_FILES["file"]["front"]);
 $targetFilePath = $targetDir . $fileName;
 $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
 
-if(isset($_POST["submit"]) && !empty($_FILES["front"]["name"])){
+if(isset($_POST["submit"]) && !empty($_FILES["file"]["front"])){
     // Allow certain file formats
     $allowTypes = array('jpg','png','jpeg','gif','pdf');
     if(in_array($fileType, $allowTypes)){
         // Upload file to server
-        if(move_uploaded_file($_FILES["front"]["tmp_name"], $targetFilePath)){
+        if(move_uploaded_file($_FILES["file"]["tmp_name"], $targetFilePath)){
             // Insert image file name into database
             //$insert = $db->query("INSERT into images (file_name, uploaded_on) VALUES ('".$fileName."', NOW())");
             if($insert){
