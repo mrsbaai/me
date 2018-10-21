@@ -1,6 +1,17 @@
 <?php
   
 
+$servername = "localhost";
+$username = "forge";
+$password = "ZUMeAhYa2FsU8GITdoHs";
 
-  echo  $_POST['name'];
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+}
 ?>
