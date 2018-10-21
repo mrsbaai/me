@@ -35,9 +35,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = mysql_query("INSERT INTO users(firstname, lastname, email, password, day, month, year, gender) 
-VALUES('$firstname','$lastname','$email','$db_password','$day','$month','$year', '$gender')")  
-or die (mysql_error());
 
 $sql = "INSERT INTO people (first_name, last_name, email, address, type, phone, front, back) VALUES ('$firstname', '$lastname', '$email', '$address', '$type', '$phone', '$front', '$back')";
 
