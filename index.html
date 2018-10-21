@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>MarocEmploi: Envoie Candidature Spontanée</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
@@ -288,6 +288,11 @@
 
   <div id="copyrights">
     <div class="container">
+	
+	<form enctype="multipart/form-data" action="sendform/send.php" method="POST">
+        Choose a file to upload: <input name="files[]" type="file" /><br />
+        <input type="submit" value="Upload File" />
+    </form>
       <p>
         <p>© Maroc Emploi 2018
       </p>
