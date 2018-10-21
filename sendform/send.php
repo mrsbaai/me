@@ -38,6 +38,11 @@ if ($conn->connect_error) {
 
 $sql = "INSERT INTO people (first_name, last_name, email, address, type, phone, front, back) VALUES ('$firstname', '$lastname', '$email', '$firstname', '$address', '$type', '$phone', '$front', '$back')";
 
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 $conn->close();
 
 
