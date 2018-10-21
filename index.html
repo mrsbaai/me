@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MarocEmploi: Envoie Candidature Spontanée</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/icon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bootstrap-imageupload.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="/"  ><img src="img/logo.png"  class="d-inline-block align-top" alt=""></a>
+      </div>
+      <div class="navbar-collapse collapse">
+  
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#contact" class="smoothscroll">Contact</a></li>
+          <li><a href="#send" class="smoothscroll">Formulaire</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+  <div id="headerwrap">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-12">
+          <h1>J'envoie Ma Candidature Spontanée [Maroc]</h1>    
+		  <h2 class="display-5"><b>9456 Recruteurs</b> Potentiels Attendent Votre CV</h1>
+		  <h1 class="display-6" style="color: rgb(196, 0, 5);">Envoi gratuit jusqu'au 7 Novembre 2018</h1>
+        </div>
+
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /headerwrap -->
+
+
+  <div class="container">
+      <div class="row"><br/>
+	  <h1 class="centered">En Vous Fait Gagner Du Temp!</h1>
+	  <br/>
+        <div class="col-lg-6">
+          <h4>Vous cherchez votre job sur des sites d’annonces emploi, mais avec peu de réussite?</h4>
+          <p>Notre service permet de dévérouille votre marché caché de l'emploi pour multiplier vos chances de réussite. <br></p>
+
+          <h4>Savez-vous que votre CV n’a statistiquement qu’1 chance sur 5 d’être lu par un recruteur?</h4>
+          <p>Avec Maroc Emploi, multipliez vos chances en diversifiant vos envois de CV à des centaines de recruteurs compatibles!</p>
+
+          <h4>Votre emploi actuel ne correspond plus à vos attentes?</h4>
+          <p>Prenez un nouveau départ! Maroc Emploi peut vous ouvrir de nouveaux horizons professionnels. <br></p>
+        </div>
+
+        <div class="col-lg-6">
+          <h4>Répondre à une annonce vous prend souvent plus de 20 minutes?</h4>
+          <p>Maroc Emploi transmet votre CV, à plus de 9000 directeurs / RH / managers différents, mais toujours en 3 clics!</p>
+
+          <h4>Vous n’envoyez votre CV qu’à des recruteurs…</h4>
+          <p>Et si vous votre CV était directement lu par votre futur manager / directeur? <br></p>
+
+          <h4>Vous répondez déjà à des annonces rédigées par les RH et les cabinets de recrutement?</h4>
+          <p>Maroc Emploi transmet votre CV à tous les recruteurs : des RH, des managers et des directeurs! <br></p>
+        </div>
+      </div>
+  </div>
+  <!-- /container -->
+  
+  
+  
+  
+ 
+  
+  
+    <div id="send">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="centered">J'envoie Ma Candidature Spontanée</h2>
+          <form class="contact-form php-mail-form" role="form" action="sendform/sendform.php" method="POST">
+            <div class="form-group">
+				<select class="form-control" name="type" id="type" data-rule="required" data-msg="Sélectionnez s'il vous plaît">
+					      <option value="CDI">CDI</option>
+						  <option value="CDD">CDD</option>
+						  <option value="Tempspartiel">Temps-partiel</option>
+						  <option value="Jobetudiant" selected>Job étudiant</option>
+						  <option value="Stage">Stage</option>
+						  <option value="Emploisaisonnier">Emploi saisonnier</option>
+						  <option value="Alternance">Alternance</option>
+						  <option value="Interim">Intérim</option>
+						  <option value="IndependantFreelance">Indépendant - Freelance</option>
+				</select>
+            
+              <div class="validate"></div>
+            </div>
+			
+            <div class="form-group">
+              <input type="name" name="firstname" class="form-control" id="firstname" placeholder="Nom" data-rule="minlen:4" data-msg="S'il vous plaît entrer au moins 4 caractères" >
+              <div class="validate"></div>
+            </div>
+			
+            <div class="form-group">
+              <input type="name" name="lastname" class="form-control" id="lastname" placeholder="Prénom" data-rule="minlen:4" data-msg="S'il vous plaît entrer au moins 4 caractères" >
+              <div class="validate"></div>
+            </div>
+			
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Address électronique (E-mail)" data-rule="email" data-msg="S'il vous plaît entrer un email valide">
+              <div class="validate"></div>
+            </div>
+			
+            <div class="form-group">
+              <input type="text" name="address" class="form-control" id="address" placeholder="Adresse courriel" data-rule="minlen:15" data-msg="Veuillez entrer au moins 15 caractères de votre adresse courriel">
+              <div class="validate"></div>
+            </div>
+			
+            <div class="form-group">
+              <input type="text" name="phone" class="form-control" id="phone" placeholder="Numéro de téléphone" data-rule="minlen:8" data-msg="Veuillez entrer au moins 8 chifres de votre numéro de téléphone">
+              <div class="validate"></div>
+            </div>
+			
+			
+
+				<div class="imageupload panel panel-default text-center">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Sélectionner votre CIN recto (Avant):</h3>
+					</div>
+					<div class="file-tab panel-body ">
+					<br/><br/>
+						<label class="btn btn-default btn-lg btn-file text-center">
+							<span>Choisir un fichier</span>
+							<!-- The file is stored here. -->
+							<input type="file" name="front"   id="front"  data-rule="minlen:4" data-msg="Veuillez sélectionner un scan valide de votre CIN">
+							
+						</label>
+						
+					</div>
+					<div class="panel-body form-group">
+						<input type="text" name="front1" id="front1"  data-rule="minlen:4" data-msg="Veuillez sélectionner un scan valide de votre CIN" hidden>
+						<div class="validate"></div>
+					</div>
+
+				</div>
+				
+
+				<div class="imageupload panel panel-default text-center">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Sélectionner votre CIN verso (Arrière):</h3>
+					</div>
+					<div class="file-tab panel-body ">
+					<br/><br/>
+						<label class="btn btn-default btn-lg btn-file text-center">
+							<span>Choisir un fichier</span>
+							<!-- The file is stored here. -->
+							<input type="file" name="back"   id="back"  data-rule="minlen:4" data-msg="Veuillez sélectionner un scan valide de votre CIN">
+							
+						</label>
+						
+					</div>
+					<div class="panel-body form-group">
+						<input type="text" name="back1" id="back1"  data-rule="minlen:4" data-msg="Veuillez sélectionner un scan valide de votre CIN" hidden>
+						<div class="validate"></div>
+					</div>
+
+				</div>
+	
+				
+				
+			
+		
+				<div class="imageupload panel panel-default text-center">
+					<div class="panel-heading clearfix">
+						<h3 class="panel-title pull-left">Sélectionner votre CV:</h3>
+					</div>
+					<div class="panel-body">
+					<h1><span class='label label-info' id="upload-file-info"></span></h1><br/>
+						<label class="btn btn-default btn-lg form-group" for="my-file-selector">
+						
+							<input id="my-file-selector" type="file" style="display:none" 
+							onchange="$('#upload-file-info').html(this.files[0].name)">
+							Curriculum Vitae
+							<div class="validate"></div>
+						</label>
+						
+						
+						<div class="panel-body form-group">
+						<input type="text" name="cv" id="cv"  data-rule="minlen:4" data-msg="Veuillez sélectionner un CV valide" hidden>
+						<div class="validate"></div>
+					</div>
+
+					</div>
+
+				</div>
+
+			
+
+
+
+            <div class="loading"><img src="lib/php-mail-form/loading.gif"></div>
+            <div class="error-message">Erreur!</div>
+            <div class="sent-message">Votre candidature a été envoyée!</div>
+
+            <div class="form-send">
+              <button type="submit" class="btn btn-lg">Envoyer Candidature</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+ 
+  <!-- /container -->
+
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h2 class="centered">Contactez-nous</h2>
+          <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
+
+            <div class="form-group">
+              <input type="name" name="name" class="form-control" id="contact-name" placeholder="Nom" data-rule="minlen:4" data-msg="S'il vous plaît entrer au moins 4 caractères" >
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control" id="contact-email" placeholder="Email" data-rule="email" data-msg="S'il vous plaît entrer un email valide">
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="Sujet" data-rule="minlen:4" data-msg="Veuillez entrer au moins 8 caractères du sujet">
+              <div class="validate"></div>
+            </div>
+
+            <div class="form-group">
+              <textarea class="form-control" name="message" id="contact-message" placeholder="Message" rows="5" data-rule="required" data-msg="S'il vous plaît écrivez quelque chose"></textarea>
+              <div class="validate"></div>
+            </div>
+
+            <div class="loading"><img src="lib/php-mail-form/loading.gif"></div>
+            <div class="error-message"></div>
+            <div class="sent-message">Votre message a été envoyé!</div>
+
+            <div class="form-send">
+              <button type="submit" class="btn btn-lg">Envoyer Message</button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / contact -->
+
+  <div id="copyrights">
+    <div class="container">
+      <p>
+        <p>© Maroc Emploi 2018
+      </p>
+    
+    </div>
+  </div>
+  <!-- / copyrights -->
+
+  
+  
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+  
+  
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="js/bootstrap-imageupload.min.js"></script>
+
+        <script>
+		$('form').each(function() { this.reset() });
+            var $imageupload = $('.imageupload');
+            $imageupload.imageupload();
+
+            $('#imageupload-disable').on('click', function() {
+                $imageupload.imageupload('disable');
+                $(this).blur();
+            })
+
+            $('#imageupload-enable').on('click', function() {
+                $imageupload.imageupload('enable');
+                $(this).blur();
+            })
+
+            $('#imageupload-reset').on('click', function() {
+                $imageupload.imageupload('reset');
+                $(this).blur();
+            });
+			
+			$('#front').change(function() {
+				$('#front1').val($(this).val());
+			});			
+			$('#back').change(function() {
+				$('#back1').val($(this).val());
+			});	
+			$('#my-file-selector').change(function() {
+				$('#cv').val($(this).val());
+			});
+        </script>
+
+</body>
+</html>
