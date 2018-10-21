@@ -32,16 +32,25 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+     	echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Erreur!');
+    window.location.href='marocemploi.live';
+    </script>");
 }
 
 
 $sql = "INSERT INTO people (first_name, last_name, email, address, type, phone, front, back) VALUES ('$firstname', '$lastname', '$email', '$address', '$type', '$phone', '$front', '$back')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+	echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Candidature Spontanée Ressue!');
+    window.location.href='marocemploi.live';
+    </script>");
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+   	echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Erreur!');
+    window.location.href='marocemploi.live';
+    </script>");
 }
 $conn->close();
 
