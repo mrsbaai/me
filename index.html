@@ -107,7 +107,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="centered">J'envoie Ma Candidature Spontanée</h2><br/>
-          <form class="contact-form php-mail-form" action="sendform/send.php" method="POST"  enctype="multipart/form-data">
+          <form enctype="multipart/form-data" action="sendform/send.php" method="POST" class="contact-form php-mail-form">
             <div class="form-group">
 				<select class="form-control" name="type" id="type" data-rule="required" data-msg="Sélectionnez s'il vous plaît">
 					      <option value="CDI">CDI</option>
@@ -160,7 +160,7 @@
 						<label class="btn btn-default btn-lg btn-file text-center">
 							<span>Choisir un fichier</span>
 							<!-- The file is stored here. -->
-							<input type="file" name="front"   id="front"  data-rule="minlen:4" data-msg="Veuillez sélectionner un scan valide de votre CIN">
+							<input type="file" name="files[]"  id="front"  data-rule="minlen:4" data-msg="Veuillez sélectionner un scan valide de votre CIN">
 							
 						</label>
 						
@@ -289,10 +289,7 @@
   <div id="copyrights">
     <div class="container">
 	
-	<form enctype="multipart/form-data" action="sendform/send.php" method="POST">
-        Choose a file to upload: <input name="files[]" type="file" /><br />
-        <input type="submit" value="Upload File" />
-    </form>
+
       <p>
         <p>© Maroc Emploi 2018
       </p>
