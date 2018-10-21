@@ -1,5 +1,5 @@
 <?php
-$dirname = "../uploads";
+$dirname = "/uploads";
 $images = glob($dirname."*.*");
 
 foreach($images as $image) {
