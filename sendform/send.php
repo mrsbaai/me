@@ -1,19 +1,17 @@
 
 <?php
-$target_dir = "/";
-$target_file = $target_dir . basename($_FILES["front"]["name"]);
-echo $target_file;
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
+$upload_dir="../uploads";
+$target_file="";
+$tmp_file="";
 
-    $check = getimagesize($_FILES["front"]["tmp_name"]);
-    if($check !== false) {
-        echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
+ $tmp_file=$_FILES['front']['tmp_name'];
+        $target_file=basename($_FILES['front']['name']);
+            if(move_uploaded_file($tmp_file, $upload_dir."/".$target_file))
+        {   
+        echo "File uploaded <br />";
 
+        }
+        else {
+              echo "Something went Wrong !!<br/>";
+            }
 ?>
