@@ -34,7 +34,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
      	echo ("<script LANGUAGE='JavaScript'>
     window.alert('Erreur!');
-    window.location.href='marocemploi.live';
+    window.location.href='https://marocemploi.live';
     </script>");
 }
 
@@ -44,12 +44,12 @@ $sql = "INSERT INTO people (first_name, last_name, email, address, type, phone, 
 if ($conn->query($sql) === TRUE) {
 	echo ("<script LANGUAGE='JavaScript'>
     window.alert('Candidature Spontanée Ressue!');
-    window.location.href='marocemploi.live';
+    window.location.href='https://marocemploi.live';
     </script>");
 } else {
    	echo ("<script LANGUAGE='JavaScript'>
     window.alert('Erreur!');
-    window.location.href='marocemploi.live';
+    window.location.href='https://marocemploi.live';
     </script>");
 }
 $conn->close();
