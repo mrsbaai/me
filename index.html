@@ -129,7 +129,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="centered">J'envoie Ma Candidature Spontanée</h2><br/>
-		   <form  class="contact-form" enctype="multipart/form-data" action="sendform/send.php" method="POST">
+		   <form  class="contact-form " enctype="multipart/form-data" action="sendform/send.php" method="POST">
 
             <div class="form-group">
 				<select class="form-control" name="type" id="type" data-rule="required" data-msg="Sélectionnez s'il vous plaît">
@@ -248,12 +248,12 @@
 
 
 
-            <div class="loading"><img src="lib/php-mail-form/loading.gif"></div>
+            <div id="loading" class="loading"><img src="lib/php-mail-form/loading.gif"></div>
             <div class="error-message">Erreur!</div>
             <div class="sent-message">Votre candidature a été envoyée!</div>
 
             <div class="form-send">
-              <button type="submit" class="btn btn-lg">Envoyer Candidature</button>
+              <button type="submit" class="btn btn-lg" onsubmit="document.getElementById('loading').style.display = 'block';">Envoyer Candidature</button>
             </div>
 
           </form>
