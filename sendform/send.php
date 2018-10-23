@@ -14,11 +14,11 @@ $type = $_POST['type'];
 
 
 $tmp_file=$_FILES['front']['tmp_name'];
-$front=date('m-d-Y_hia').'-'.$firstname.'-'.$lastname.'-front.jpg');
+$front=date('m-d-Y_hia').'-'.$firstname.'-'.$lastname.'-front.jpg';
 move_uploaded_file($tmp_file, $upload_dir."/".$front);
 
 $tmp_file=$_FILES['back']['tmp_name'];
-$back=date('m-d-Y_hia').'-'.$firstname.'-'.$lastname.'-back.jpg');
+$back=date('m-d-Y_hia').'-'.$firstname.'-'.$lastname.'-back.jpg';
 move_uploaded_file($tmp_file, $upload_dir."/".$back);
 
 
