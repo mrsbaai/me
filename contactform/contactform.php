@@ -29,7 +29,11 @@ $sql = "INSERT INTO people (first_name, email, subject, message) VALUES ('$name'
 $v= $conn->query($sql);
 
 $conn->close();
- echo "Merci pour vorte message!";
+ 
+ 	echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Merci pour vorte message!');
+    window.location.href='../';
+    </script>");
 
 ?>
 
