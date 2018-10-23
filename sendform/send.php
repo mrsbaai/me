@@ -34,7 +34,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
      	echo ("<script LANGUAGE='JavaScript'>
     window.alert('Erreur!');
-    window.location.href='https://marocemploi.live';
+    window.location.href='../';
     </script>");
 }
 
