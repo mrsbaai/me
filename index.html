@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 
@@ -129,7 +129,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <h2 class="centered">J'envoie Ma Candidature Spontanée</h2><br/>
-		   <form class="contact-form" enctype="multipart/form-data" action="sendform/send.php" method="POST">
+		   <form  class="contact-form" enctype="multipart/form-data" action="sendform/send.php" method="POST">
 
             <div class="form-group">
 				<select class="form-control" name="type" id="type" data-rule="required" data-msg="Sélectionnez s'il vous plaît">
@@ -340,17 +340,14 @@
 		$('form').each(function() { this.reset() });
             var $imageupload = $('.imageupload');
             $imageupload.imageupload();
-
             $('#imageupload-disable').on('click', function() {
                 $imageupload.imageupload('disable');
                 $(this).blur();
             })
-
             $('#imageupload-enable').on('click', function() {
                 $imageupload.imageupload('enable');
                 $(this).blur();
             })
-
             $('#imageupload-reset').on('click', function() {
                 $imageupload.imageupload('reset');
                 $(this).blur();
