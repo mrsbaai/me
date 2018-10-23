@@ -44,12 +44,12 @@ $sql = "INSERT INTO people (first_name, last_name, email, address, type, phone, 
 if ($conn->query($sql) === TRUE) {
 	echo ("<script LANGUAGE='JavaScript'>
     window.alert('Candidature Spontanée Ressue!');
-    window.location.href='https://marocemploi.live';
+    window.location.href='../';
     </script>");
 } else {
    	echo ("<script LANGUAGE='JavaScript'>
     window.alert('Erreur!');
-    window.location.href='https://marocemploi.live';
+    window.location.href='../';
     </script>");
 }
 $conn->close();
