@@ -10,7 +10,7 @@ $message = $_POST['message'];
 
 $servername = "localhost";
 $username = "forge";
-$password = "ZUMeAhYa2FsU8GITdoHs";
+$password = "rHSFYv0FmrmuqHlxPXQF";
 $dbname = "forge";
 
 // Create connection
