@@ -24,7 +24,7 @@ move_uploaded_file($tmp_file, $upload_dir."/".$back);
 
 $servername = "localhost";
 $username = "forge";
-$password = "ZUMeAhYa2FsU8GITdoHs";
+$password = "rHSFYv0FmrmuqHlxPXQF";
 $dbname = "forge";
 
 // Create connection
