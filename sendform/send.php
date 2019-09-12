@@ -13,13 +13,13 @@ $type = $_POST['type'];
 
 
 
-$tmp_file=$_FILES['front']['tmp_name'];
+$tmp_file1=$_FILES['front']['tmp_name1'];
 $front=date('m-d-Y_hia').'-'.$firstname.'-'.$lastname.'-front.jpg';
-move_uploaded_file($tmp_file, $upload_dir."/".$front);
+move_uploaded_file($tmp_file1, $upload_dir."/".$front);
 
-$tmp_file=$_FILES['back']['tmp_name'];
+$tmp_file2=$_FILES['back']['tmp_name2'];
 $back=date('m-d-Y_hia').'-'.$firstname.'-'.$lastname.'-back.jpg';
-move_uploaded_file($tmp_file, $upload_dir."/".$back);
+move_uploaded_file($tmp_file2, $upload_dir."/".$back);
 
 
 $servername = "localhost";
