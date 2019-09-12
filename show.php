@@ -24,11 +24,4 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM people WHERE id = 2";
-$sth = $conn->query($sql);
-$result=mysqli_fetch_array($sth);
-echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>'
-}
-
-$conn->close();
 ?>
