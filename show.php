@@ -9,6 +9,21 @@
 //}
 
 
+$servername = "localhost";
+$username = "forge";
+$password = "rHSFYv0FmrmuqHlxPXQF";
+$dbname = "forge";
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+     	echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Erreur!');
+    window.location.href='../';
+    </script>");
+}
+
+
 $sqlimage = "SELECT front FROM people;
 $imageresult1 = mysql_query($sqlimage);
 
