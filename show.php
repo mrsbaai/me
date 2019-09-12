@@ -23,7 +23,7 @@ if ($conn->connect_error) {
     </script>");
 }
 
-$resource = $conn->query('SELECT * FROM people WHERE 1');
+$resource = $conn->query('SELECT * FROM people');
 if ( !$resource ) die('Database Error: '.$conn->error);
 while ( $row = $resource->fetch_assoc() ) {
     echo "{$row['field']}";
