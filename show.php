@@ -27,8 +27,8 @@
   <!-- Fixed navbar -->
 
     <div class="container">
-    
-        <div class="col-lg-12">
+
+		<center>
 
 		<?php
 $files = glob("uploads/*.*");
