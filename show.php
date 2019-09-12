@@ -25,13 +25,9 @@
 
 <body>
   <!-- Fixed navbar -->
-  <div class="navbar navbar-default navbar-fixed-top">
+
     <div class="container">
     
-
-  <div id="headerwrap">
-    <div class="container">
-      <div class="row text-center">
         <div class="col-lg-12">
 
 		<?php
@@ -39,8 +35,8 @@ $files = glob("uploads/*.*");
 for ($i=1; $i<count($files); $i++)
 {
 	$num = $files[$i];
-	print $num."<br />";
-	echo '<img src="'.$num.'" alt="random image" />'."<br /><br />";
+	
+	echo '<img class="img-fluid" src="'.$num.'" alt="$num" />'."<br /><br />";
 }
 
 
