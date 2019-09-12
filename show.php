@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 }
 
 
-$sqlimage = "SELECT front FROM people;
+$sqlimage = "SELECT front FROM people";
 $imageresult1 = mysql_query($sqlimage);
 
 while($rows = mysql_fetch_assoc($imageresult1))
