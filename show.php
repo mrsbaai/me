@@ -32,7 +32,7 @@
 
 		<?php
 $files = glob("uploads/*.*");
-for ($i=1; $i<count($files); $i++)
+for ($i=0; $i<count($files); $i++)
 {
 	$num = $files[$i];
 	
