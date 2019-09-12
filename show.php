@@ -24,16 +24,16 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "SELECT * FROM people";
-$result = $conn->query($sql);
+if ($result = $mysqli->query("SELECT * FROM people", MYSQLI_USE_RESULT)) {
 
-echo "<table>"; // start a table tag in the HTML
-
-while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
-echo "<tr><td>" . $row['name'] . "</td><td>" . $row['age'] . "</td></tr>";  //$row['index'] the index here is a field name
+    /* Note, that we can't execute any functions which interact with the
+       server until result set was closed. All calls will return an
+       'out of sync' error */
+    if (!$mysqli->query("SET @a:='this will not work'")) {
+        printf("Error: %s\n", $mysqli->error);
+    }
+    $result->close();
 }
 
-echo "</table>"; //Close the table in HTML
-
-mysql_close();
+$mysqli->close();
 ?>
