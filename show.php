@@ -24,16 +24,11 @@ if ($conn->connect_error) {
 }
 
 
-if ($result = $mysqli->query("SELECT * FROM people", MYSQLI_USE_RESULT)) {
-
-    /* Note, that we can't execute any functions which interact with the
-       server until result set was closed. All calls will return an
-       'out of sync' error */
-    if (!$mysqli->query("SET @a:='this will not work'")) {
-        printf("Error: %s\n", $mysqli->error);
-    }
-    $result->close();
+$sql = "SELECT * FROM people WHERE id = 2";
+$sth = $conn->query($sql);
+$result=mysqli_fetch_array($sth);
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['image'] ).'"/>'
 }
 
-$mysqli->close();
+$conn->close();
 ?>
