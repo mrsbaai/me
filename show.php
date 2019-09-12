@@ -24,8 +24,8 @@ if ($conn->connect_error) {
 }
 
 
-$query = "SELECT * FROM people"; //You don't need a ; like you do in SQL
-$result = mysql_query($query);
+$sql = "SELECT * FROM people";
+$result = $conn->query($sql);
 
 echo "<table>"; // start a table tag in the HTML
 
