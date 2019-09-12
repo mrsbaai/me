@@ -24,12 +24,16 @@ if ($conn->connect_error) {
 }
 
 
-$sqlimage = "SELECT front FROM people";
-$imageresult1 = mysql_query($sqlimage);
+$query = "SELECT * FROM people"; //You don't need a ; like you do in SQL
+$result = mysql_query($query);
 
-while($rows = mysql_fetch_assoc($imageresult1))
-{       
-    $image = $rows['image'];    
-    print $image;
+echo "<table>"; // start a table tag in the HTML
+
+while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
+echo "<tr><td>" . $row['name'] . "</td><td>" . $row['age'] . "</td></tr>";  //$row['index'] the index here is a field name
 }
+
+echo "</table>"; //Close the table in HTML
+
+mysql_close();
 ?>
